@@ -1,9 +1,11 @@
+/* smoke test
 import React from 'react';
-import { render } from '@testing-library/react';
+import ReactDOM from 'react-dom';
 import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+it ('renders learn react link', () => {
+  
+   const main =document.createElement('main')
+   ReactDOM.render(<App />, main)
+   ReactDOM.unmountComponentAtNode(main);
+});*/

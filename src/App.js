@@ -43,7 +43,7 @@ handleAddCard=(listId)=>{
   this.setState({
      store:{
       lists: newList,
-      cardIds: {
+      allCards: {
         ...this.state.store.allCards,
         [newCard.id]:newCard
       }
@@ -59,11 +59,11 @@ handleDeleteCard=(idx)=>{
    cardIds: list.cardIds.filter(id => id !== idx)
   }))
   const deCard = omit(allCards, idx)
-
+console.log(idx)
   this.setState({
    store:{
      lists:newList,
-     cardIds: deCard
+     allCards: deCard
 
    }
   })
